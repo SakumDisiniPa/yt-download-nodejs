@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yt-Downloader-BY-Sakum</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .btn-custom {
+            transition: transform 0.2s ease-in-out;
+            position: relative;
+        }
+        .btn-custom:hover {
+            transform: scale(1.05);
+        }
+        .btn-custom::before {
+            content: "";
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, red, blue, green, orange, purple, red);
+            background-size: 300% 300%;
+            border-radius: 5px;
+            z-index: -1;
+            filter: blur(5px);
+            animation: rainbow-border 3s infinite linear;
+        }
+        .development-text {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+            animation: blink 1s infinite alternate, colorChange 2s infinite alternate;
+        }
+        .development-text::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, red, blue, green, orange, purple, red);
+            background-size: 300% 300%;
+            border-radius: 5px;
+            z-index: -1;
+            filter: blur(5px);
+            animation: rainbow-border 3s infinite linear;
+        }
+        @keyframes blink {
+            from { opacity: 1; }
+            to { opacity: 0.3; }
+        }
+        @keyframes colorChange {
+            0% { color: red; }
+            25% { color: blue; }
+            50% { color: green; }
+            75% { color: orange; }
+            100% { color: purple; }
+        }
+        @keyframes rainbow-border {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        <h2 class="title">Yt-Downloader-BY-Sakum</h2>
+        <p class="development-text">MASIH DALAM PENGEMBANGAN LUR SEADANYA SAJA :)</p>
+        <div class="d-grid gap-2 col-md-6 mx-auto">
+            <a href="/youtube" class="btn btn-success btn-custom">YouTube Downloader</a>
+            <a href="/instagram" class="btn btn-success btn-custom">Instagram Downloader</a>
+            <a href="/facebook" class="btn btn-success btn-custom">Facebook Downloader</a>
+            <a href="/tiktok" class="btn btn-success btn-custom">TikTok Downloader</a>
+            <a href="/bilibili" class="btn btn-success btn-custom">BiliBili/Bstation Downloader</a>
+        </div> 
+    </div>
+</body>
+</html>

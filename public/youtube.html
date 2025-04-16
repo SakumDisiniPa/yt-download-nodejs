@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yt-Downloader-BY-Sakum</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">YouTube Downloader</h2>
+        <div class="mb-3">
+            <input type="text" id="url" class="form-control" placeholder="Masukkan URL YouTube">
+        </div>
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" onclick="downloadVideo()">Download Video</button>
+            <button class="btn btn-success" onclick="downloadAudio()">Download Audio</button>
+        </div>
+        <script>
+            function downloadFile(type) {
+                const url = document.getElementById("url").value;
+                if (!url) {
+                    alert("Masukkan URL terlebih dahulu!");
+                    return;
+                }
+                
+                window.location.href = `/download/youtube/${type}?url=${encodeURIComponent(url)}`;
+            }
+    
+            function downloadVideo() {
+                downloadFile("video");
+            }
+            function downloadAudio() {
+                downloadFile("audio");
+            }
+        </script>    
+</body>
+</html>
